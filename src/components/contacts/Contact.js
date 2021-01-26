@@ -9,6 +9,7 @@ class Contact extends Component {
 
   onDeleteClick = id => {
     //// DELETE CONTACT ////
+    
   };
 
   render() {

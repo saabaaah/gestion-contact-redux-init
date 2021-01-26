@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Contact from './Contact';
+import {getContacts} from '../../actions/contactActions';
 
 // importer les element de state
 import {connect} from 'react-redux';
@@ -55,13 +56,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return{
-    getContacts: () =>{
-      dispatch({
-        type: 'GET_CONTACTS'
-      })
-    }
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Contacts);
+export default connect(mapStateToProps, {getContacts})(Contacts);
